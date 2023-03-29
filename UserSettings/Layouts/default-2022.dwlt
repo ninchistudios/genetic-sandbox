@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 1147
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Test Runner
   m_RootView: {fileID: 10}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 333
+  controlID: 20
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 160
+  controlID: 17
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 163
+  controlID: 86
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 161
+  controlID: 18
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -322,7 +322,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 0
-  controlID: 162
+  controlID: 19
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -386,7 +386,7 @@ MonoBehaviour:
     m_SaveData: []
     m_OverlaysVisible: 1
   m_Spl:
-    ID: 523
+    ID: 163
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -452,8 +452,8 @@ MonoBehaviour:
       uniqueId: '[GeneticSandbox][suite]'
       name: GeneticSandbox
       fullName: GeneticSandbox
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.1471697
       messages: 
       output: 
       stacktrace: 
@@ -468,8 +468,8 @@ MonoBehaviour:
       uniqueId: '[Tests.dll][suite]'
       name: Tests.dll
       fullName: /Users/james/Desktop/workspace-pers/genetic-sandbox/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.1013867
       messages: 
       output: 
       stacktrace: 
@@ -484,8 +484,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][ncs][suite]
       name: ncs
       fullName: ncs
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.1005759
       messages: 
       output: 
       stacktrace: 
@@ -500,8 +500,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/ncs/[Tests][ncs.TestBreeding][suite]
       name: TestBreeding
       fullName: ncs.TestBreeding
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0529637
       messages: 
       output: 
       stacktrace: 
@@ -516,8 +516,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/ncs/TestBreeding/[Tests][ncs.TestBreeding.TestImmaculateMutantIsVaried]
       name: TestImmaculateMutantIsVaried
       fullName: ncs.TestBreeding.TestImmaculateMutantIsVaried
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0329581
       messages: 
       output: 
       stacktrace: 
@@ -533,8 +533,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/ncs/TestBreeding/[Tests][ncs.TestBreeding.TestOrganismDeepCopyWorksAsExpected]
       name: TestOrganismDeepCopyWorksAsExpected
       fullName: ncs.TestBreeding.TestOrganismDeepCopyWorksAsExpected
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.001587
       messages: 
       output: 
       stacktrace: 
@@ -550,8 +550,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/ncs/[Tests][ncs.TestGenome][suite]
       name: TestGenome
       fullName: ncs.TestGenome
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0312294
       messages: 
       output: 
       stacktrace: 
@@ -566,8 +566,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/ncs/TestGenome/[Tests][ncs.TestGenome.TestGenomeDeepCopiesCorrectly]
       name: TestGenomeDeepCopiesCorrectly
       fullName: ncs.TestGenome.TestGenomeDeepCopiesCorrectly
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0014926
       messages: 
       output: 
       stacktrace: 
@@ -583,8 +583,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/ncs/[Tests][ncs.TestUtils][suite]
       name: TestUtils
       fullName: ncs.TestUtils
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0106475
       messages: 
       output: 
       stacktrace: 
@@ -599,8 +599,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/ncs/TestUtils/[Tests][ncs.TestUtils.TestHighWeightProducesSmallVariance]
       name: TestHighWeightProducesSmallVariance
       fullName: ncs.TestUtils.TestHighWeightProducesSmallVariance
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0060473
       messages: 
       output: 
       stacktrace: 
@@ -618,7 +618,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 76ddd38cffffff7f
+      m_ExpandedIDs: 75f98e8376ddd38cc7b62db20d2f1bd6e557abf77e027832ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -706,9 +706,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e07b0000
-    m_LastClickedID: 31712
-    m_ExpandedIDs: 00000000f4050000d47b000000ca9a3b
+    m_SelectedIDs: e2530000
+    m_LastClickedID: 21474
+    m_ExpandedIDs: 00000000d4530000d653000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -736,7 +736,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000d4530000d6530000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -767,20 +767,20 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Gene
+      m_OriginalName: Gene
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 5754
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -878,9 +878,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 107c0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 3c2affff
+      m_ExpandedIDs: c8f7ffff2af8ffff1cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
