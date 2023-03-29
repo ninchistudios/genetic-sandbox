@@ -1,10 +1,9 @@
 ﻿using System;
 using ninjachimpstudios.utils;
-using UnityEngine.UIElements;
 
 namespace ninjachimpstudios {
 
-    public class Gene {
+    public abstract class Gene {
 
         public Gene(int minvalue) {
             Minvalue = minvalue;
@@ -50,7 +49,7 @@ namespace ninjachimpstudios {
         }
 
         // TODO how the gene expresses itself
-        public void Express() { }
+        public abstract void Express();
 
     }
 
