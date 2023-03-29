@@ -6,6 +6,15 @@ using ncs.utils;
 namespace ncs {
 
     public class Genome {
+        
+        // all Genes associated with the Genome, each mutates normally
+        public List<Gene> Genes { get; protected set; }
+
+        // following properties govern metagenetics of the genome, and mutate very rarely
+        public double NormalMutationRate { get; private set; } // suggested 0.001
+        public double MetaMutationRate { get; private set; } // suggested 0.00001
+        public double MutationWeight { get; private set; } // suggested 0.5
+        public double MetaMutationWeight { get; private set; } // suggested 0.95
 
         public Genome() { }
 
@@ -46,15 +55,6 @@ namespace ncs {
                         Genes.Add(parent2TempGenes.Find(b => b.Descriptor.Equals(gene.Descriptor)));
                 }
         }
-
-        // all Genes associated with the Genome, each mutates normally
-        public List<Gene> Genes { get; }
-
-        // following properties govern metagenetics of the genome, and mutate very rarely
-        public double NormalMutationRate { get; private set; } // suggested 0.001
-        public double MetaMutationRate { get; private set; } // suggested 0.00001
-        public double MutationWeight { get; private set; } // suggested 0.5
-        public double MetaMutationWeight { get; private set; } // suggested 0.95
 
         // the genome itself, and each gene has a chance to mutate according the [Meta]MutationChance
         public void MutateNormally() {

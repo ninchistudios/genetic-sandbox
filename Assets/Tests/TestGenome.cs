@@ -8,12 +8,14 @@ namespace ncs {
 
     public class NewTestScript {
 
-        private Genome G = new Genome();
+        private Genome G;
 
         // A Test behaves as an ordinary method
         [Test]
         public void TestGenomeReplicatesCorrectly() {
-            // Use the Assert class to test conditions
+            Genome G = new Genome();
+            //G.MutationWeight = 0.5d;
+            
         }
 
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
