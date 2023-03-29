@@ -1,5 +1,4 @@
-﻿using System;
-using ninjachimpstudios.utils;
+﻿using ninjachimpstudios.utils;
 
 namespace ninjachimpstudios {
 
@@ -9,10 +8,10 @@ namespace ninjachimpstudios {
 
         // copy constructor, no logic
         public GeneticOrganism(GeneticOrganism other) {
-            this.Genome = new Genome(other.Genome);
-            this.Species = other.Species;
-            this.IsFemale = other.IsFemale;
-            this.DaysSinceBirth = other.DaysSinceBirth;
+            Genome = new Genome(other.Genome);
+            Species = other.Species;
+            IsFemale = other.IsFemale;
+            DaysSinceBirth = other.DaysSinceBirth;
         }
 
         public Genome Genome { get; private set; }
@@ -25,10 +24,10 @@ namespace ninjachimpstudios {
         // once bred, the genome mutates normally
         public IGeneticOrganism BreedWith(IGeneticOrganism partner) {
             var offspring = new GeneticOrganism {
-                Genome = new Genome(this.Genome, partner.Genome)
+                Genome = new Genome(Genome, partner.Genome)
             };
             offspring.Genome.MutateNormally();
-            offspring.Species = this.Species;
+            offspring.Species = Species;
             offspring.IsFemale = RandomSex();
             offspring.DaysSinceBirth = 0;
             return offspring;
@@ -38,7 +37,7 @@ namespace ninjachimpstudios {
         // only changes are sex (50/50 M/F) and age (0)
         // does not mutate
         public IGeneticOrganism ImmaculateGeneticCopy() {
-            GeneticOrganism clone = new GeneticOrganism(this);
+            var clone = new GeneticOrganism(this);
             clone.IsFemale = RandomSex();
             clone.DaysSinceBirth = 0;
             return clone;

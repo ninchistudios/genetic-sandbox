@@ -11,44 +11,40 @@ namespace ninjachimpstudios {
 
         // copy constructor, no logic
         public Genome(Genome other) {
-            this.Genes = other.Genes.ToList(); // deep copies
-            this.NormalMutationRate = other.NormalMutationRate;
-            this.MetaMutationRate = other.MetaMutationRate;
-            this.MutationWeight = other.MutationWeight;
-            this.MetaMutationWeight = other.MetaMutationWeight;
+            Genes = other.Genes.ToList(); // deep copies
+            NormalMutationRate = other.NormalMutationRate;
+            MetaMutationRate = other.MetaMutationRate;
+            MutationWeight = other.MutationWeight;
+            MetaMutationWeight = other.MetaMutationWeight;
         }
 
         // breeding constructor
         public Genome(Genome parent1, Genome parent2) {
             // randomise parent1 or parent2's metagenetics
-            this.NormalMutationRate =
+            NormalMutationRate =
                 RandomUtils.NextDouble() < 0.5d ? parent1.NormalMutationRate : parent2.NormalMutationRate;
-            this.MetaMutationRate =
+            MetaMutationRate =
                 RandomUtils.NextDouble() < 0.5d ? parent1.MetaMutationRate : parent2.NormalMutationRate;
-            this.MutationWeight = RandomUtils.NextDouble() < 0.5d ? parent1.MutationWeight : parent2.MutationWeight;
-            this.MetaMutationWeight =
+            MutationWeight = RandomUtils.NextDouble() < 0.5d ? parent1.MutationWeight : parent2.MutationWeight;
+            MetaMutationWeight =
                 RandomUtils.NextDouble() < 0.5d ? parent1.MetaMutationWeight : parent2.MetaMutationWeight;
             // iterate the genes, randomising parent1 or parent2
             // TODO can this be modified to account for dominant or recessive genes?
-            this.Genes = new List<Gene>();
-            List<Gene> parent1TempGenes = parent1.Genes.ToList(); // deep copy
-            List<Gene> parent2TempGenes = parent2.Genes.ToList(); // deep copy
+            Genes = new List<Gene>();
+            var parent1TempGenes = parent1.Genes.ToList(); // deep copy
+            var parent2TempGenes = parent2.Genes.ToList(); // deep copy
             // potentially some future parents may have extra genes, the longer list should be the one iterated
-            List<Gene> longerList =
-                (parent2TempGenes.Count > parent1TempGenes.Count) ? parent2TempGenes : parent1TempGenes;
+            var longerList =
+                parent2TempGenes.Count > parent1TempGenes.Count ? parent2TempGenes : parent1TempGenes;
 
-            foreach (var gene in longerList) {
+            foreach (var gene in longerList)
                 if (RandomUtils.NextDouble() < 0.5d) {
-                    if (parent1TempGenes.Exists(a => a.Descriptor.Equals(gene.Descriptor))) {
-                        this.Genes.Add(parent1TempGenes.Find(a => a.Descriptor.Equals(gene.Descriptor)));
-                    }
+                    if (parent1TempGenes.Exists(a => a.Descriptor.Equals(gene.Descriptor)))
+                        Genes.Add(parent1TempGenes.Find(a => a.Descriptor.Equals(gene.Descriptor)));
                 } else {
-                    if (parent2TempGenes.Exists(a => a.Descriptor.Equals(gene.Descriptor))) {
-                        this.Genes.Add(parent2TempGenes.Find(b => b.Descriptor.Equals(gene.Descriptor)));
-                    }
+                    if (parent2TempGenes.Exists(a => a.Descriptor.Equals(gene.Descriptor)))
+                        Genes.Add(parent2TempGenes.Find(b => b.Descriptor.Equals(gene.Descriptor)));
                 }
-
-            }
         }
 
         // all Genes associated with the Genome, each mutates normally
@@ -63,14 +59,12 @@ namespace ninjachimpstudios {
         // the genome itself, and each gene has a chance to mutate according the [Meta]MutationChance
         public void MutateNormally() {
             if (RandomUtils.NextDouble() < MetaMutationRate) MetaMutateGuaranteed();
-            foreach (var gene in Genes) {
-                gene.MutateNormally(NormalMutationRate, MutationWeight);
-            }
+            foreach (var gene in Genes) gene.MutateNormally(NormalMutationRate, MutationWeight);
         }
 
         // One random gene is guaranteed to mutate
         public void MutateGuaranteed() {
-            int index = RandomUtils.Next(0, Genes.Count);
+            var index = RandomUtils.Next(0, Genes.Count);
             Genes[index].MutateGuaranteed(MutationWeight);
             throw new MutationFailedException();
         }
