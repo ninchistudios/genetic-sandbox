@@ -7,9 +7,9 @@
         public bool IsFemale { get; }
         public int DaysSinceBirth { get; }
 
-        public IGeneticOrganism BreedWith(IGeneticOrganism partner);
-        public IGeneticOrganism ImmaculateGeneticCopy();
-        public IGeneticOrganism ImmaculateMutant();
+        public GeneticOrganism BreedWith(GeneticOrganism partner);
+        public GeneticOrganism ImmaculateGeneticCopy();
+        public GeneticOrganism ImmaculateMutant();
 
     }
 

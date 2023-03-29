@@ -6,7 +6,7 @@ using ncs.utils;
 namespace ncs {
 
     public class Genome {
-        
+
         // all Genes associated with the Genome, each mutates normally
         public List<Gene> Genes { get; private set; }
 
@@ -71,13 +71,14 @@ namespace ncs {
             foreach (var g in genomeToCopy.Genes) {
                 deep.Genes.Add(g.DeepCopy());
             }
+
             deep.NormalMutationRate = genomeToCopy.NormalMutationRate;
             MetaMutationRate = genomeToCopy.MetaMutationRate;
             MutationWeight = genomeToCopy.MutationWeight;
             MetaMutationWeight = genomeToCopy.MetaMutationWeight;
             return deep;
         }
-        
+
         // the genome itself, and each gene has a chance to mutate according the [Meta]MutationChance
         public void MutateNormally() {
             if (RandomUtils.NextDouble() < MetaMutationRate) MetaMutateGuaranteed();
@@ -88,7 +89,6 @@ namespace ncs {
         public void MutateGuaranteed() {
             var index = RandomUtils.Next(0, Genes.Count);
             Genes[index].MutateGuaranteed(MutationWeight);
-            throw new MutationFailedException();
         }
 
         // one MetaGenetic property will mutate

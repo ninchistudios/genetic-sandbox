@@ -4,25 +4,36 @@ namespace ncs {
 
     public class GeneticOrganism : IGeneticOrganism {
 
+        public Genome Genome { get; private set; }
+        public string Species { get; private set; }
+        public bool IsFemale { get; private set; }
+        public int DaysSinceBirth { get; private set; }
+
+        public GeneticOrganism(Genome g, string species, bool female, int daysold) {
+            Genome = new Genome(g);
+            Species = species;
+            IsFemale = female;
+            DaysSinceBirth = daysold;
+        }
+
         public GeneticOrganism() { }
 
         // copy constructor, no logic
         public GeneticOrganism(GeneticOrganism other) {
+            DeepCopy(other);
+        }
+
+        private void DeepCopy(GeneticOrganism other) {
             Genome = new Genome(other.Genome);
             Species = other.Species;
             IsFemale = other.IsFemale;
             DaysSinceBirth = other.DaysSinceBirth;
         }
 
-        public Genome Genome { get; private set; }
-        public string Species { get; private set; }
-        public bool IsFemale { get; private set; }
-        public int DaysSinceBirth { get; private set; }
-
         // to breed, must be the same species, must be one male and one female, and both must be breeding age
         // each gene in the bred genome has an 0.5 chance of being this organism's or the partner's
         // once bred, the genome mutates normally
-        public IGeneticOrganism BreedWith(IGeneticOrganism partner) {
+        public GeneticOrganism BreedWith(GeneticOrganism partner) {
             var offspring = new GeneticOrganism {
                 Genome = new Genome(Genome, partner.Genome)
             };
@@ -36,7 +47,7 @@ namespace ncs {
         // creates an almost exact duplicate, used for initial population seeding
         // only changes are sex (50/50 M/F) and age (0)
         // does not mutate
-        public IGeneticOrganism ImmaculateGeneticCopy() {
+        public GeneticOrganism ImmaculateGeneticCopy() {
             var clone = new GeneticOrganism(this);
             clone.IsFemale = RandomSex();
             clone.DaysSinceBirth = 0;
@@ -44,8 +55,8 @@ namespace ncs {
         }
 
         // creates a duplicate which is guaranteed to be mutated in some way
-        public IGeneticOrganism ImmaculateMutant() {
-            IGeneticOrganism mutatedClone = (GeneticOrganism)ImmaculateGeneticCopy();
+        public GeneticOrganism ImmaculateMutant() {
+            GeneticOrganism mutatedClone = ImmaculateGeneticCopy();
             mutatedClone.Genome.MutateGuaranteed();
             return mutatedClone;
         }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using ncs.utils;
+using UnityEngine;
 
 namespace ncs {
 
@@ -10,9 +11,7 @@ namespace ncs {
 
         public ColourGene(ColourGene other) : base(other) { }
 
-        private ColourGene() : base() {
-            
-        }
+        private ColourGene() : base() { }
 
         public Color TheColor { get; private set; }
 
@@ -22,7 +21,11 @@ namespace ncs {
         }
 
         public override void DoMutation(double weight) {
-            throw new System.NotImplementedException();
+            float newr = (float)RandomUtils.WeightedRandom(TheColor.r, 0.0, 1.0, weight);
+            float newg = (float)RandomUtils.WeightedRandom(TheColor.g, 0.0, 1.0, weight);
+            float newb = (float)RandomUtils.WeightedRandom(TheColor.b, 0.0, 1.0, weight);
+            float newa = (float)RandomUtils.WeightedRandom(TheColor.a, 0.0, 1.0, weight);
+            TheColor = new Color(newr, newg, newb, newa);
         }
 
         public override void Express() {
