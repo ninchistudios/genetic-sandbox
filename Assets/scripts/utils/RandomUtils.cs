@@ -54,7 +54,7 @@ namespace ncs.utils {
 
             var deviation = (randomValue * 2.0 - 1.0) * (1.0 - weight);
 
-            var newValue = Math.Round(currentValue + deviation * (deviation < 0 ? lowerRange : upperRange));
+            var newValue = currentValue + deviation * (deviation < 0 ? lowerRange : upperRange);
 
             if (newValue < minValue)
                 newValue = minValue;

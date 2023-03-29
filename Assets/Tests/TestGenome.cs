@@ -6,7 +6,7 @@ using UnityEngine.TestTools;
 
 namespace ncs {
 
-    public class NewTestScript {
+    public class TestGenome {
 
         private Genome G;
 
@@ -24,16 +24,7 @@ namespace ncs {
                 genome2.Genes.Find(b => b.Descriptor.Equals(testDescriptor)));
             Assert.AreNotEqual(genome1.Genes[0], genome2.Genes[0]);
         }
-
-        // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-        // `yield return null;` to skip a frame.
-        [UnityTest]
-        public IEnumerator NewTestScriptWithEnumeratorPasses() {
-            // Use the Assert class to test conditions.
-            // Use yield to skip a frame.
-            yield return null;
-        }
-
+        
     }
 
 }
