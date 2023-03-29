@@ -20,7 +20,12 @@ namespace ncs.utils {
             lock (SYNC_LOCK) {
                 return RANDOM.NextDouble();
             }
+        }
 
+        public static float NextFloat() {
+            lock (SYNC_LOCK) {
+                return (float)RANDOM.NextDouble();
+            }
         }
 
         // a weight of 0 means no weighting to the current value, 1 is complete weight
@@ -62,7 +67,7 @@ namespace ncs.utils {
 
             return newValue;
         }
-
+        
     }
 
 }

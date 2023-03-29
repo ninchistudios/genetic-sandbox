@@ -6,17 +6,11 @@ namespace ncs {
     public abstract class Gene {
 
         // following meta properties never change
-        public readonly string Descriptor;
-
-        public Gene(string descriptor) {
-            Descriptor = descriptor;
-        }
+        public string Descriptor;
 
         // copy constructor, no logic
         // should be called and expanded by subclasses
-        public Gene(Gene other) {
-            Descriptor = other.Descriptor;
-        }
+        public Gene(Gene other) { }
 
         protected Gene() { }
 

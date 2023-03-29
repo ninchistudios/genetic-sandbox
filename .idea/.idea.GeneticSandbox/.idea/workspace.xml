@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b439896-6372-4242-af29-8dc7ef37b005" name="Changes" comment="" />
+    <list default="true" id="4b439896-6372-4242-af29-8dc7ef37b005" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GeneticSandbox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GeneticSandbox/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/TestBreeding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/TestBreeding.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/TestGenome.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/TestGenome.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/ColourGene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Genes/ColourGene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/ColourGene.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Genes/ColourGene.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/Gene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Gene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/utils/RandomUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/utils/RandomUtils.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Tests/TestBreeding.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/GUI/Views/EditModeTestListGUI.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -19,23 +33,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\James\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\James\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\James\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\James\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\James\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\James\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/build\GeneticSandbox.exe" />
@@ -90,5 +104,37 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Tests/TestGenome.cs</url>
+          <line>16</line>
+          <properties documentPath="G:\Workspace\GeneticSandbox\Assets\Tests\TestGenome.cs" initialLine="16" containingFunctionPresentation="method 'TestGenomeDeepCopiesCorrectly'">
+            <startOffsets>
+              <option value="353" />
+            </startOffsets>
+            <endOffsets>
+              <option value="385" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/scripts/Genes/ColourGene.cs</url>
+          <line>21</line>
+          <properties documentPath="G:\Workspace\GeneticSandbox\Assets\scripts\Genes\ColourGene.cs" initialLine="18" containingFunctionPresentation="constructor 'ColourGene'">
+            <startOffsets>
+              <option value="682" />
+            </startOffsets>
+            <endOffsets>
+              <option value="704" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

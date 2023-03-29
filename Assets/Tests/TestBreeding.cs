@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using ncs.Genes;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
@@ -18,9 +19,9 @@ namespace ncs {
 
         [SetUp]
         public void Init() {
-            testDescriptor = "TestColourGene";
+            testDescriptor = "ColourGene";
             testSpecies = "TestSpecies";
-            ColourGene cg = new ColourGene(testDescriptor, Color.gray);
+            ColourGene cg = new ColourGene(Color.gray);
             genes = new List<Gene>();
             genes.Add(cg);
             genome = new Genome(genes, 0.1, 0.001, 0.5, 0.95);
