@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using ninjachimpstudios.utils;
+using ncs.utils;
 
-namespace ninjachimpstudios {
+namespace ncs {
 
     public class Genome {
 

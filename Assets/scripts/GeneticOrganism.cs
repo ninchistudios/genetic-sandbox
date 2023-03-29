@@ -1,6 +1,6 @@
-﻿using ninjachimpstudios.utils;
+﻿using ncs.utils;
 
-namespace ninjachimpstudios {
+namespace ncs {
 
     public class GeneticOrganism : IGeneticOrganism {
 

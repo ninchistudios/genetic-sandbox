@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ninjachimpstudios.utils {
+namespace ncs.utils {
 
     public static class RandomUtils {
 

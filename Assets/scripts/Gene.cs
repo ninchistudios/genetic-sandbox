@@ -1,7 +1,7 @@
 ﻿using System;
-using ninjachimpstudios.utils;
+using ncs.utils;
 
-namespace ninjachimpstudios {
+namespace ncs {
 
     public abstract class Gene {
 

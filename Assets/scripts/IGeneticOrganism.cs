@@ -1,4 +1,4 @@
-﻿namespace ninjachimpstudios {
+﻿namespace ncs {
 
     public interface IGeneticOrganism {
 
