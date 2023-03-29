@@ -8,7 +8,7 @@ namespace ncs {
     public class Genome {
         
         // all Genes associated with the Genome, each mutates normally
-        public List<Gene> Genes { get; protected set; }
+        public List<Gene> Genes { get; private set; }
 
         // following properties govern metagenetics of the genome, and mutate very rarely
         public double NormalMutationRate { get; private set; } // suggested 0.001
@@ -16,16 +16,25 @@ namespace ncs {
         public double MutationWeight { get; private set; } // suggested 0.5
         public double MetaMutationWeight { get; private set; } // suggested 0.95
 
-        public Genome() { }
+        public Genome(List<Gene> genes, double normrate, double metarate, double mutweight, double metaweight) {
+            Genes = genes.ToList();
+            NormalMutationRate = normrate;
+            MetaMutationRate = metarate;
+            MutationWeight = mutweight;
+            MetaMutationWeight = metaweight;
+        }
 
         // copy constructor, no logic
         public Genome(Genome other) {
-            Genes = other.Genes.ToList(); // deep copies
-            NormalMutationRate = other.NormalMutationRate;
-            MetaMutationRate = other.MetaMutationRate;
-            MutationWeight = other.MutationWeight;
-            MetaMutationWeight = other.MetaMutationWeight;
+            Genome newMe = DeepCopy(other);
+            Genes = newMe.Genes;
+            NormalMutationRate = newMe.NormalMutationRate;
+            MetaMutationRate = newMe.MetaMutationRate;
+            MutationWeight = newMe.MutationWeight;
+            MetaMutationWeight = newMe.MetaMutationWeight;
         }
+
+        private Genome() { }
 
         // breeding constructor
         public Genome(Genome parent1, Genome parent2) {
@@ -56,6 +65,19 @@ namespace ncs {
                 }
         }
 
+        private Genome DeepCopy(Genome genomeToCopy) {
+            Genome deep = new Genome();
+            deep.Genes = new List<Gene>();
+            foreach (var g in genomeToCopy.Genes) {
+                deep.Genes.Add(g.DeepCopy());
+            }
+            deep.NormalMutationRate = genomeToCopy.NormalMutationRate;
+            MetaMutationRate = genomeToCopy.MetaMutationRate;
+            MutationWeight = genomeToCopy.MutationWeight;
+            MetaMutationWeight = genomeToCopy.MetaMutationWeight;
+            return deep;
+        }
+        
         // the genome itself, and each gene has a chance to mutate according the [Meta]MutationChance
         public void MutateNormally() {
             if (RandomUtils.NextDouble() < MetaMutationRate) MetaMutateGuaranteed();

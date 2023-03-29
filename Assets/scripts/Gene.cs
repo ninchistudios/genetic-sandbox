@@ -18,6 +18,11 @@ namespace ncs {
             Descriptor = other.Descriptor;
         }
 
+        protected Gene() { }
+
+        // returns a deep copy of itself
+        public abstract Gene DeepCopy();
+
         /// <summary>The gene has a normal chance to mutate</summary>
         /// <param name="rate">normal mutation rate - double in the range 0.0 - 1.0</param>
         /// ///
@@ -36,11 +41,12 @@ namespace ncs {
             if (weight < 0.0d || weight > 1.0d) throw new ArgumentOutOfRangeException();
             DoMutation(weight);
         }
-        
+
         /// <summary>Called when mutation is required, implemented in subclass</summary>
         /// <param name="weight">mutation weight - double in the range 0.0 - 1.0</param>
         public abstract void DoMutation(double weight);
 
+        /// <summary>The implementation of the Gene's behaviour</summary>
         public abstract void Express();
 
     }
