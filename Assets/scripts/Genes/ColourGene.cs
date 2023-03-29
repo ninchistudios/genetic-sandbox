@@ -11,13 +11,13 @@ namespace ncs.Genes {
         protected ColourGene() : base() {
             Descriptor = DESCRIPTOR;
         }
-        
+
         public ColourGene(ColourGene other) : base(other) {
             Descriptor = DESCRIPTOR;
             // new random ColourGene is a random colour at full opacity
             this.TheColor = new Color(RandomUtils.NextFloat(),RandomUtils.NextFloat(),RandomUtils.NextFloat(),1.0f);
         }
-        
+
         public ColourGene(Color color) : base() {
             Descriptor = DESCRIPTOR;
             this.TheColor = color;
