@@ -1,5 +1,6 @@
 ﻿using System;
 using ncs.utils;
+using UnityEngine;
 
 namespace ncs {
 
@@ -41,7 +42,7 @@ namespace ncs {
         public abstract void DoMutation(double weight);
 
         /// <summary>The implementation of the Gene's behaviour</summary>
-        public abstract void Express();
+        public abstract void Express(OrganismMono go);
 
     }
 

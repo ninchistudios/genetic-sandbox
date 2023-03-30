@@ -36,8 +36,8 @@ namespace ncs.Genes {
             TheColor = new Color(newr, newg, newb, newa);
         }
 
-        public override void Express() {
-            // colour doesn't have a behaviour expression, it's just a property
+        public override void Express(OrganismMono go) {
+            go.bodySprite.color = TheColor;
             // TODO colour could influence a desire to seek out similar coloured terrain as camouflage?
         }
 

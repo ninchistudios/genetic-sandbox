@@ -24,7 +24,7 @@ namespace ncs.Genes {
             throw new System.NotImplementedException();
         }
 
-        public override void Express() {
+        public override void Express(OrganismMono go) {
             throw new System.NotImplementedException();
         }
 

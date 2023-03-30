@@ -1,4 +1,5 @@
 ﻿using ncs.utils;
+using UnityEngine;
 
 namespace ncs {
 
@@ -33,11 +34,11 @@ namespace ncs {
             IsAlive = other.IsAlive;
         }
 
-        public void Live() {
+        public void Live(OrganismMono go) {
             if (IsAlive) {
                 DaysSinceBirth++;
                 foreach (var gene in Genome.Genes) {
-                    gene.Express();
+                    gene.Express(go);
                 }
             }
 

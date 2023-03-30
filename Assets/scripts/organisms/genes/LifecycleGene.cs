@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace ncs.Genes {
 
     public class LifecycleGene : Gene {
@@ -23,7 +25,7 @@ namespace ncs.Genes {
 
         // Update is called every frame
         // 30 frames to a day - configured
-        public override void Express() {
+        public override void Express(OrganismMono go) {
             throw new System.NotImplementedException();
         }
 

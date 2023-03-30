@@ -8,8 +8,12 @@ namespace ncs {
 
     public class SimManager : Singleton<SimManager> {
 
-        [SerializeField] public int framesPerDay = 30;
         [SerializeField] public bool playing = false;
+        [SerializeField] public int framesPerDay = 30;
+        [SerializeField] public int spawnCount = 1;
+        [SerializeField] public double spawnPositionWeight = 0.5;
+        [SerializeField] public GameObject spawnParent;
+        [SerializeField] public List<GameObject> spawnPrefabs;
 
         public List<GeneticOrganism> Organisms { get; private set; }
 
@@ -40,11 +44,6 @@ namespace ncs {
                     frameRoller = 1;
                     SimDay++;
                 }
-
-                foreach (var organism in Organisms) {
-                    organism.Live();
-                }
-
             }
         }
 
@@ -58,6 +57,15 @@ namespace ncs {
 
         public void ResetSim() {
             InitNewSim();
+        }
+
+        public void Spawn() {
+            // the first spawn is random, the remainder are weighted to its position
+            Vector3 pos = RandomUtils.Random2DVector3(Screen.width, Screen.height, 5);
+            for (int i = 0; i < spawnCount; i++) {
+                Instantiate(spawnPrefabs[RandomUtils.Next(0, spawnPrefabs.Count)], Camera.main.ScreenToWorldPoint(pos),Quaternion.identity,spawnParent.transform);
+                pos = RandomUtils.RandomWeighted2DVector3(Screen.width, Screen.height, pos, spawnPositionWeight);
+            }
         }
 
     };

@@ -16,7 +16,7 @@
     -unity-text-align: middle-center;
     font-size: 15px;
     color: rgb(255, 255, 255);
-    -unity-font: url('project://database/Assets/Resources/Fonts/BENCHNINE-LIGHT.TTF?fileID=12800000&guid=3dc6c82337a9dcc49a9af8f685ba2e99&type=3#BENCHNINE-LIGHT');
+    -unity-font: resource('Fonts/BENCHNINE-BOLD');
     -unity-font-definition: resource('Fonts/BENCHNINE-BOLD SDF');
 }
 

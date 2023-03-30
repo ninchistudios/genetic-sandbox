@@ -1,4 +1,6 @@
 ﻿using System;
+using UnityEngine;
+using Random = System.Random;
 
 namespace ncs.utils {
 
@@ -67,7 +69,17 @@ namespace ncs.utils {
 
             return newValue;
         }
-        
+
+        public static Vector3 Random2DVector3(int width, int height, int zpos) {
+            return new Vector3(RandomUtils.Next(0, width), RandomUtils.Next(0, height), zpos);
+        }
+
+        public static Vector3 RandomWeighted2DVector3(int width, int height, Vector3 pos, double spawnPositionWeight) {
+            double newx = RandomUtils.WeightedRandom(pos.x,0.0,Convert.ToDouble(width),spawnPositionWeight);
+            double newy = RandomUtils.WeightedRandom(pos.y,0.0,Convert.ToDouble(height),spawnPositionWeight);
+            return new Vector3(Convert.ToSingle(newx), Convert.ToSingle(newy), pos.z);
+        }
+
     }
 
 }

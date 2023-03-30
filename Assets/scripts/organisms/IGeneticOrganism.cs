@@ -1,4 +1,6 @@
-﻿namespace ncs {
+﻿using UnityEngine;
+
+namespace ncs {
 
     public interface IGeneticOrganism {
 
@@ -8,8 +10,8 @@
         public int DaysSinceBirth { get; }
         public bool IsAlive { get; }
 
-        public void Live();
-        
+        public abstract void Live(OrganismMono go);
+
         public GeneticOrganism BreedWith(GeneticOrganism partner);
         public GeneticOrganism ImmaculateGeneticCopy();
         public GeneticOrganism ImmaculateMutant();

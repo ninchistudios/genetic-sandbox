@@ -38,6 +38,18 @@ namespace ncs {
 
         }
 
+        [Test]
+        public void TestNextForBool() {
+            int c = 0;
+            for (int i = 0; i < 10000; i++) {
+                // RandomUtils.Next(0,2) should return 50% of 0 or 1. 10000 runs should total about 5000 0s. Certainly not 3333.
+                c += RandomUtils.Next(0, 2);
+            }
+            //Debug.Log("c: " + c);
+            Assert.Greater(c,4200);
+            Assert.Less(c,5800);
+        }
+
     }
 
 }
