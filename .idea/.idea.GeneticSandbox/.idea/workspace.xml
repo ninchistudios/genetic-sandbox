@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4b439896-6372-4242-af29-8dc7ef37b005" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GeneticSandbox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GeneticSandbox/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/TestBreeding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/TestBreeding.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/TestGenome.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/TestGenome.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/ColourGene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Genes/ColourGene.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/ColourGene.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Genes/ColourGene.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/Gene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Gene.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/utils/RandomUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/utils/RandomUtils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestEnvironment.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestEnvironment.unity.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,10 +12,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Tests/TestBreeding.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/GUI/Views/EditModeTestListGUI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.33/UnityEngine.TestRunner/NUnitExtensions/Commands/SetUpTearDownCommand.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -85,10 +80,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="5084">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="5084" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -104,37 +99,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Tests/TestGenome.cs</url>
-          <line>16</line>
-          <properties documentPath="G:\Workspace\GeneticSandbox\Assets\Tests\TestGenome.cs" initialLine="16" containingFunctionPresentation="method 'TestGenomeDeepCopiesCorrectly'">
-            <startOffsets>
-              <option value="353" />
-            </startOffsets>
-            <endOffsets>
-              <option value="385" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/scripts/Genes/ColourGene.cs</url>
-          <line>21</line>
-          <properties documentPath="G:\Workspace\GeneticSandbox\Assets\scripts\Genes\ColourGene.cs" initialLine="18" containingFunctionPresentation="constructor 'ColourGene'">
-            <startOffsets>
-              <option value="682" />
-            </startOffsets>
-            <endOffsets>
-              <option value="704" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
