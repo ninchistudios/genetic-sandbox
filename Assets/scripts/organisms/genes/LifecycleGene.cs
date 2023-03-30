@@ -21,6 +21,8 @@ namespace ncs.Genes {
             throw new System.NotImplementedException();
         }
 
+        // Update is called every frame
+        // 30 frames to a day - configured
         public override void Express() {
             throw new System.NotImplementedException();
         }

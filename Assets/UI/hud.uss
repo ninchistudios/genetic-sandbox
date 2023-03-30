@@ -14,10 +14,15 @@
     width: auto;
     height: 18px;
     -unity-text-align: middle-center;
-    font-size: 10px;
+    font-size: 15px;
     color: rgb(255, 255, 255);
+    -unity-font: url('project://database/Assets/Resources/Fonts/BENCHNINE-LIGHT.TTF?fileID=12800000&guid=3dc6c82337a9dcc49a9af8f685ba2e99&type=3#BENCHNINE-LIGHT');
+    -unity-font-definition: resource('Fonts/BENCHNINE-BOLD SDF');
 }
 
 .hud-data-value {
     color: rgb(11, 255, 0);
+    -unity-font: url('project://database/Assets/Resources/Fonts/AGENCYR.TTF?fileID=12800000&guid=b51e819956447f549b47b598f43a7f4c&type=3#AGENCYR');
+    font-size: 15px;
+    -unity-font-definition: resource('Fonts/BENCHNINE-BOLD SDF');
 }
