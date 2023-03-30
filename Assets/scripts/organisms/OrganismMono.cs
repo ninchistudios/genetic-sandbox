@@ -20,7 +20,7 @@ namespace ncs {
 
         private void OnEnable() {
             List<Gene> genes = new List<Gene>();
-            genes.Add(new ColourGene(Color.gray));
+            genes.Add(new ColourGene(bodySprite.color));
             Genome genome = new Genome(genes, normalMutationRate, metaMutationRate, mutationWeight, metaMutationWeight);
             organism = new GeneticOrganism(genome, species, RandomUtils.Next(0, 2) == 0, 0);
         }

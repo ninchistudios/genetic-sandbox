@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5683332275441877910}
   - component: {fileID: 3280851150955551710}
   m_Layer: 6
-  m_Name: HerbivoreAGO
+  m_Name: CarnivoreAGO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_Children:
   - {fileID: 2254651981164171583}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3280851150955551710
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab8138e3a6065a4096aebe50d858f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  species: HerbivoreA
+  species: CarnivoreA
   normalMutationRate: 0.01
   metaMutationRate: 0.001
   mutationWeight: 0.5
@@ -126,7 +126,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b,
     type: 3}
-  m_Color: {r: 0.5, g: 1, b: 0.5691569, a: 1}
+  m_Color: {r: 1, g: 0.5, b: 0.5, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

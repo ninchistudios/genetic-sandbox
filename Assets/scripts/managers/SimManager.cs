@@ -24,6 +24,11 @@ namespace ncs {
         //public bool Playing { get; private set; } = false;
         private int frameRoller = 0;
 
+        void Awake() {
+            Application.targetFrameRate = -1;
+            QualitySettings.vSyncCount = 0;
+        }
+
         public void OnEnable() {
             InitNewSim();
         }
@@ -61,9 +66,12 @@ namespace ncs {
 
         public void Spawn() {
             // the first spawn is random, the remainder are weighted to its position
+            // all spawns in a cluster will be the same (random) species for now
             Vector3 pos = RandomUtils.Random2DVector3(Screen.width, Screen.height, 5);
+            GameObject spawn = spawnPrefabs[RandomUtils.Next(0, spawnPrefabs.Count)];
             for (int i = 0; i < spawnCount; i++) {
-                Instantiate(spawnPrefabs[RandomUtils.Next(0, spawnPrefabs.Count)], Camera.main.ScreenToWorldPoint(pos),Quaternion.identity,spawnParent.transform);
+                Instantiate(spawn, Camera.main.ScreenToWorldPoint(pos),
+                    Quaternion.identity, spawnParent.transform);
                 pos = RandomUtils.RandomWeighted2DVector3(Screen.width, Screen.height, pos, spawnPositionWeight);
             }
         }
