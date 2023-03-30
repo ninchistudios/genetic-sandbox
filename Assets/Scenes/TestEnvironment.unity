@@ -474,7 +474,6 @@ MonoBehaviour:
   _persistent: 1
   playing: 0
   framesPerDay: 30
-  spawnCount: 10
   spawnPositionWeight: 0.8
   spawnParent: {fileID: 598540739}
   spawnPrefabs:

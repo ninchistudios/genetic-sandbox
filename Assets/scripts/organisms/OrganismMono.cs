@@ -16,21 +16,20 @@ namespace ncs {
         [SerializeField] public double mutationWeight = 0.5; // suggested 0.5
         [SerializeField] public double metaMutationWeight = 0.95; // suggested 0.95
         [SerializeField] public SpriteRenderer bodySprite;
-        private GeneticOrganism organism;
+        [SerializeField] public int idealPackSize = 1;
+        public GeneticOrganism Organism { get; private set; }
 
         private void OnEnable() {
             List<Gene> genes = new List<Gene>();
             genes.Add(new ColourGene(bodySprite.color));
+            genes.Add(new SocialisationGene(idealPackSize));
             Genome genome = new Genome(genes, normalMutationRate, metaMutationRate, mutationWeight, metaMutationWeight);
-            organism = new GeneticOrganism(genome, species, RandomUtils.Next(0, 2) == 0, 0);
+            Organism = new GeneticOrganism(genome, species, RandomUtils.Next(0, 2) == 0, 0);
         }
-
-        // Start is called before the first frame update
-        void Start() { }
 
         // Update is called once per frame
         void Update() {
-            organism.Live(this);
+            Organism.Live(this);
         }
 
     }

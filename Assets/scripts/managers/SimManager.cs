@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ncs.Genes;
 using ncs.utils;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -10,7 +11,6 @@ namespace ncs {
 
         [SerializeField] public bool playing = false;
         [SerializeField] public int framesPerDay = 30;
-        [SerializeField] public int spawnCount = 1;
         [SerializeField] public double spawnPositionWeight = 0.5;
         [SerializeField] public GameObject spawnParent;
         [SerializeField] public List<GameObject> spawnPrefabs;
@@ -66,14 +66,25 @@ namespace ncs {
 
         public void Spawn() {
             // the first spawn is random, the remainder are weighted to its position
-            // all spawns in a cluster will be the same (random) species for now
+            // all spawns in a pack will be the same (random) species for now
+            // pack size is governed by the first spawn's socialisation gene (if exists)
             Vector3 pos = RandomUtils.Random2DVector3(Screen.width, Screen.height, 5);
             GameObject spawn = spawnPrefabs[RandomUtils.Next(0, spawnPrefabs.Count)];
-            for (int i = 0; i < spawnCount; i++) {
-                Instantiate(spawn, Camera.main.ScreenToWorldPoint(pos),
-                    Quaternion.identity, spawnParent.transform);
-                pos = RandomUtils.RandomWeighted2DVector3(Screen.width, Screen.height, pos, spawnPositionWeight);
+            GameObject spawned = Instantiate(spawn, Camera.main.ScreenToWorldPoint(pos), Quaternion.identity, spawnParent.transform);
+            int packSize = 1;
+            try {
+                SocialisationGene sg = (SocialisationGene)spawned.GetComponent<OrganismMono>().Organism.Genome.Genes
+                    .Find(a => a.Descriptor.Equals("SocialisationGene"));
+                packSize = sg.IdealPackSize;
+            } catch (Exception e) {
+                Debug.Log(e);
             }
+            for (int i = 0; i < packSize - 1; i++) {
+                pos = RandomUtils.RandomWeighted2DVector3(Screen.width, Screen.height, pos, spawnPositionWeight);
+                Instantiate(spawn, Camera.main.ScreenToWorldPoint(pos), Quaternion.identity, spawnParent.transform);
+
+            }
+
         }
 
     };

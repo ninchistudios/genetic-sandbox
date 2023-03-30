@@ -51,6 +51,7 @@ MonoBehaviour:
   mutationWeight: 0.5
   metaMutationWeight: 0.95
   bodySprite: {fileID: 2509773592431103003}
+  idealPackSize: 20
 --- !u!1 &4749129180241529284
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ namespace ncs {
         public double MetaMutationRate { get; private set; } // suggested 0.00001
         public double MutationWeight { get; private set; } // suggested 0.5
         public double MetaMutationWeight { get; private set; } // suggested 0.95
-
+        
         public Genome(List<Gene> genes, double normrate, double metarate, double mutweight, double metaweight) {
             Genes = genes.ToList();
             NormalMutationRate = normrate;
