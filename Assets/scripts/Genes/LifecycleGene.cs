@@ -1,21 +1,18 @@
-﻿using ncs.utils;
-using UnityEngine;
-
 namespace ncs.Genes {
 
-    public class ReproductionGene : Gene {
+    public class LifecycleGene : Gene {
 
-        private static readonly string DESCRIPTOR = "ReproductionGene";
+        private static readonly string DESCRIPTOR = "LifecycleGene";
 
-        protected ReproductionGene() : base() {
+        protected LifecycleGene() : base() {
             Descriptor = DESCRIPTOR;
         }
 
-        public ReproductionGene(ReproductionGene other) : base(other) {
+        public LifecycleGene(LifecycleGene other) : base(other) {
             Descriptor = DESCRIPTOR;
             // TODO implement
         }
-
+        
         public override Gene DeepCopy() {
             throw new System.NotImplementedException();
         }
