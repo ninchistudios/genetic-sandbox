@@ -1,0 +1,23 @@
+.hud-data-label {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    align-self: stretch;
+    justify-content: space-around;
+    flex-grow: 0;
+    flex-direction: column;
+    width: auto;
+    height: 18px;
+    -unity-text-align: middle-center;
+    font-size: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.hud-data-value {
+    color: rgb(11, 255, 0);
+}

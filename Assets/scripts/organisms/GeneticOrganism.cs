@@ -8,12 +8,14 @@ namespace ncs {
         public string Species { get; private set; }
         public bool IsFemale { get; private set; }
         public int DaysSinceBirth { get; private set; }
+        public bool IsAlive { get; private set; }
 
         public GeneticOrganism(Genome g, string species, bool female, int daysold) {
             Genome = new Genome(g);
             Species = species;
             IsFemale = female;
             DaysSinceBirth = daysold;
+            IsAlive = true;
         }
 
         public GeneticOrganism() { }
@@ -28,11 +30,28 @@ namespace ncs {
             Species = other.Species;
             IsFemale = other.IsFemale;
             DaysSinceBirth = other.DaysSinceBirth;
+            IsAlive = other.IsAlive;
         }
 
-        // to breed, must be the same species, must be one male and one female, and both must be breeding age
-        // each gene in the bred genome has an 0.5 chance of being this organism's or the partner's
+        public void Live() {
+            if (IsAlive) {
+                DaysSinceBirth++;
+                foreach (var gene in Genome.Genes) {
+                    gene.Express();
+                }
+            }
+
+        }
+
+        // 
         // once bred, the genome mutates normally
+        /// <summary>
+        /// to breed, must be the same species, must be one male and one female, and both must be breeding age
+        /// each gene in the bred genome has an 0.5 chance of being this organism's or the partner's
+        /// once bred, the genome mutates normally
+        /// </summary>
+        /// <param name="partner">GeneticOrganism</param>
+        /// <returns>GeneticOrganism</returns>
         public GeneticOrganism BreedWith(GeneticOrganism partner) {
             var offspring = new GeneticOrganism {
                 Genome = new Genome(Genome, partner.Genome)

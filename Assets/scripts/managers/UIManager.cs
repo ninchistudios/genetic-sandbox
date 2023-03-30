@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using ncs.utils;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -7,12 +8,28 @@ namespace ncs {
 
     public class UIManager : Singleton<UIManager> {
 
-        private VisualTreeAsset _visualTree;
-        private UIDocument _uiDocument;
+        private UIDocument uiDocument;
+
+        private void OnEnable() {
+            uiDocument = gameObject.GetComponent<UIDocument>();
+            Button burgerButton = uiDocument.rootVisualElement.Q<Button>("BurgerButton");
+            burgerButton.clicked += ShowMenu;
+        }
+
+        public void Update() {
+            
+        }
 
         void Start() {
-            _uiDocument = gameObject.GetComponent<UIDocument>();
             StartCoroutine(OneSecondUpdate());
+        }
+
+        private void ShowMenu() {
+            
+        }
+
+        private void HideMenu() {
+            
         }
 
         private IEnumerator OneSecondUpdate() {
