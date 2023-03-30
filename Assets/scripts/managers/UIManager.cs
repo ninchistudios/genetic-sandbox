@@ -53,8 +53,8 @@ namespace ncs {
         }
 
         private IEnumerator OneSecondUpdate() {
-            framesPerDayData.text = simManager.framesPerDay.ToString();
             while (true) {
+                framesPerDayData.text = simManager.framesPerDay.ToString();
                 yield return new WaitForSeconds(1);
             }
         }
