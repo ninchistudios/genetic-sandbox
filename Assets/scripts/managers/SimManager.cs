@@ -13,7 +13,8 @@ namespace ncs {
         [SerializeField] public int framesPerDay = 30;
         [SerializeField] public double spawnPositionWeight = 0.5;
         [SerializeField] public GameObject spawnParent;
-        [SerializeField] public List<GameObject> spawnPrefabs;
+        [SerializeField] public List<GameObject> herbivorePrefabs;
+        [SerializeField] public List<GameObject> carnivorePrefabs;
 
         public List<GeneticOrganism> Organisms { get; private set; }
 
@@ -64,12 +65,19 @@ namespace ncs {
             InitNewSim();
         }
 
-        public void Spawn() {
+        public void SpawnHerbivores() {
+            Spawn(herbivorePrefabs[RandomUtils.Next(0, herbivorePrefabs.Count)]);
+        }
+        
+        public void SpawnCarnivores() {
+            Spawn(carnivorePrefabs[RandomUtils.Next(0, carnivorePrefabs.Count)]);
+        }
+        
+        public void Spawn(GameObject spawn) {
             // the first spawn is random, the remainder are weighted to its position
             // all spawns in a pack will be the same (random) species for now
             // pack size is governed by the first spawn's socialisation gene (if exists)
             Vector3 pos = RandomUtils.Random2DVector3(Screen.width, Screen.height, 5);
-            GameObject spawn = spawnPrefabs[RandomUtils.Next(0, spawnPrefabs.Count)];
             GameObject spawned = Instantiate(spawn, Camera.main.ScreenToWorldPoint(pos), Quaternion.identity, spawnParent.transform);
             int packSize = 1;
             try {

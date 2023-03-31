@@ -474,10 +474,11 @@ MonoBehaviour:
   _persistent: 1
   playing: 0
   framesPerDay: 30
-  spawnPositionWeight: 0.8
+  spawnPositionWeight: 0.9
   spawnParent: {fileID: 598540739}
-  spawnPrefabs:
+  herbivorePrefabs:
   - {fileID: 4168087123377320709, guid: ec85a837b2eb86244b53ef91cfb4570e, type: 3}
+  carnivorePrefabs:
   - {fileID: 4168087123377320709, guid: 2c66e016e2edab84b9d5f525fc56bb4d, type: 3}
 --- !u!4 &1773803304
 Transform:

@@ -25,8 +25,10 @@ namespace ncs {
             pauseButton.clicked += PauseClicked;
             Button resetButton = uiDocument.rootVisualElement.Q<Button>("ResetButton");
             resetButton.clicked += ResetClicked;
-            Button spawnButton = uiDocument.rootVisualElement.Q<Button>("SpawnButton");
-            spawnButton.clicked += SpawnClicked;
+            Button spawnHButton = uiDocument.rootVisualElement.Q<Button>("SpawnHButton");
+            spawnHButton.clicked += SpawnHClicked;
+            Button spawnCButton = uiDocument.rootVisualElement.Q<Button>("SpawnCButton");
+            spawnCButton.clicked += SpawnCClicked;
             currentDayData = uiDocument.rootVisualElement.Q<Label>("CurrentDayData");
             framesPerDayData = uiDocument.rootVisualElement.Q<Label>("FramesPerDayData");
         }
@@ -54,8 +56,11 @@ namespace ncs {
             simManager.ResetSim();
         }
         
-        private void SpawnClicked() {
-            simManager.Spawn();
+        private void SpawnHClicked() {
+            simManager.SpawnHerbivores();
+        }
+        private void SpawnCClicked() {
+            simManager.SpawnCarnivores();
         }
 
         private IEnumerator OneSecondUpdate() {
