@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using ncs.Genes;
 using ncs.utils;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 namespace ncs {
@@ -17,7 +18,12 @@ namespace ncs {
         [SerializeField] public double metaMutationWeight = 0.95; // suggested 0.95
         [SerializeField] public SpriteRenderer bodySprite;
         [SerializeField] public int idealPackSize = 1;
+        [SerializeField] public int maxAge = 50;
+        public UnityEvent deathEvent = new UnityEvent();
+        public UnityEvent birthEvent = new UnityEvent();
         public GeneticOrganism Organism { get; private set; }
+        private bool reportedAlive = false;
+        private bool reportedDead = false;
 
         private void OnEnable() {
             List<Gene> genes = new List<Gene>();
@@ -27,11 +33,19 @@ namespace ncs {
             Organism = new GeneticOrganism(genome, species, RandomUtils.Next(0, 2) == 0, 0);
         }
 
-        // Update is called once per frame
         void Update() {
             Organism.Live(this);
-        }
+            if (!reportedDead && !Organism.IsAlive) {
+                deathEvent.Invoke();
+                reportedDead = true;
+            }
 
+            if (!reportedAlive && Organism.IsAlive) {
+                birthEvent.Invoke();
+                reportedAlive = true;
+            }
+        }
+        
     }
 
 }

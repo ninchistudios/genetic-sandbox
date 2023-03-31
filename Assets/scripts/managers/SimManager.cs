@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using ncs.Genes;
 using ncs.utils;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 namespace ncs {
@@ -15,6 +16,7 @@ namespace ncs {
         [SerializeField] public GameObject spawnParent;
         [SerializeField] public List<GameObject> herbivorePrefabs;
         [SerializeField] public List<GameObject> carnivorePrefabs;
+        public int LiveOrganisms { get; private set; } = 0;
 
         public List<GeneticOrganism> Organisms { get; private set; }
 
@@ -68,29 +70,47 @@ namespace ncs {
         public void SpawnHerbivores() {
             Spawn(herbivorePrefabs[RandomUtils.Next(0, herbivorePrefabs.Count)]);
         }
-        
+
         public void SpawnCarnivores() {
             Spawn(carnivorePrefabs[RandomUtils.Next(0, carnivorePrefabs.Count)]);
         }
-        
+
+        private void OrganismBorn() {
+            LiveOrganisms += 1;
+        }
+
+        private void OrganismDied() {
+            LiveOrganisms -= 1;
+        }
+
         public void Spawn(GameObject spawn) {
             // the first spawn is random, the remainder are weighted to its position
-            // all spawns in a pack will be the same (random) species for now
+            // all spawns in a pack will be the same (random) species for now and a random age
             // pack size is governed by the first spawn's socialisation gene (if exists)
             Vector3 pos = RandomUtils.Random2DVector3(Screen.width, Screen.height, 5);
-            GameObject spawned = Instantiate(spawn, Camera.main.ScreenToWorldPoint(pos), Quaternion.identity, spawnParent.transform);
+            GameObject spawned = Instantiate(spawn, Camera.main.ScreenToWorldPoint(pos), Quaternion.identity,
+                spawnParent.transform);
+            OrganismMono spawnedMono = spawned.GetComponent<OrganismMono>(); 
+            spawnedMono.birthEvent.AddListener(OrganismBorn);
+            spawnedMono.deathEvent.AddListener(OrganismDied);
+            spawnedMono.Organism.SetRandomAge(spawnedMono.maxAge);
             int packSize = 1;
             try {
-                SocialisationGene sg = (SocialisationGene)spawned.GetComponent<OrganismMono>().Organism.Genome.Genes
+                SocialisationGene sg = (SocialisationGene)spawnedMono.Organism.Genome.Genes
                     .Find(a => a.Descriptor.Equals("SocialisationGene"));
                 packSize = sg.IdealPackSize;
             } catch (Exception e) {
                 Debug.Log(e);
             }
+
             for (int i = 0; i < packSize - 1; i++) {
                 pos = RandomUtils.RandomWeighted2DVector3(Screen.width, Screen.height, pos, spawnPositionWeight);
-                Instantiate(spawn, Camera.main.ScreenToWorldPoint(pos), Quaternion.identity, spawnParent.transform);
-
+                OrganismMono om =
+                    Instantiate(spawn, Camera.main.ScreenToWorldPoint(pos), Quaternion.identity, spawnParent.transform)
+                        .GetComponent<OrganismMono>();
+                om.birthEvent.AddListener(OrganismBorn);
+                om.deathEvent.AddListener(OrganismDied);
+                om.Organism.SetRandomAge(om.maxAge);
             }
 
         }

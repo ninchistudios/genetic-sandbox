@@ -14,6 +14,8 @@ namespace ncs {
         private UIDocument uiDocument;
         private Label currentDayData;
         private Label framesPerDayData;
+        private Label organismData;
+        private int liveOrganisms;
 
         private void OnEnable() {
             uiDocument = gameObject.GetComponent<UIDocument>();
@@ -31,10 +33,12 @@ namespace ncs {
             spawnCButton.clicked += SpawnCClicked;
             currentDayData = uiDocument.rootVisualElement.Q<Label>("CurrentDayData");
             framesPerDayData = uiDocument.rootVisualElement.Q<Label>("FramesPerDayData");
+            organismData = uiDocument.rootVisualElement.Q<Label>("OrganismData");
         }
 
         public void Update() {
             currentDayData.text = simManager.SimDay.ToString();
+            organismData.text = simManager.LiveOrganisms.ToString();
         }
 
         void Start() {

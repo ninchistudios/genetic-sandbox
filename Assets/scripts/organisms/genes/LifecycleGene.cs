@@ -14,7 +14,7 @@ namespace ncs.Genes {
             Descriptor = DESCRIPTOR;
             // TODO implement
         }
-        
+
         public override Gene DeepCopy() {
             throw new System.NotImplementedException();
         }
@@ -23,9 +23,10 @@ namespace ncs.Genes {
             throw new System.NotImplementedException();
         }
 
-        // Update is called every frame
-        // 30 frames to a day - configured
         public override void Express(OrganismMono go) {
+            // lifecycle phases:
+            // - breedmin / breedmax : ages in days between which breeding is possible and mate-seeking occurs
+            // - senescence : age in days at which degradation begins - needs a way to be expressed such as speed, and a daily death chance
             throw new System.NotImplementedException();
         }
 

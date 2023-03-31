@@ -44,6 +44,10 @@ namespace ncs {
 
         }
 
+        public void SetRandomAge(int maxAge) {
+            DaysSinceBirth = RandomUtils.Next(0, maxAge);
+        }
+
         // 
         // once bred, the genome mutates normally
         /// <summary>
