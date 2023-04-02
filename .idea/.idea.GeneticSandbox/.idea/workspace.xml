@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b439896-6372-4242-af29-8dc7ef37b005" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GeneticSandbox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GeneticSandbox/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestEnvironment.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestEnvironment.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/HUD.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/HUD.uxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/scripts/managers/SimManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/managers/SimManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/organisms/Genome.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/organisms/Genome.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/managers/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/managers/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/organisms/GeneticOrganism.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/organisms/GeneticOrganism.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/scripts/organisms/OrganismMono.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/organisms/OrganismMono.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/organisms/prefabs/CarnivoreAGO.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/organisms/prefabs/CarnivoreAGO.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/organisms/prefabs/HerbivoreAGO.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/organisms/prefabs/HerbivoreAGO.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/organisms/genes/LifecycleGene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/organisms/genes/LifecycleGene.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +15,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Tests/TestBreeding.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/GUI/Views/EditModeTestListGUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.33/UnityEngine.TestRunner/NUnitExtensions/Commands/SetUpTearDownCommand.cs" root0="SKIP_HIGHLIGHTING" />
@@ -106,37 +106,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/scripts/managers/SimManager.cs</url>
-          <line>71</line>
-          <properties documentPath="G:\Workspace\GeneticSandbox\Assets\scripts\managers\SimManager.cs" initialLine="70" containingFunctionPresentation="method 'Spawn'">
-            <startOffsets>
-              <option value="2032" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2105" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/scripts/organisms/OrganismMono.cs</url>
-          <line>24</line>
-          <properties documentPath="G:\Workspace\GeneticSandbox\Assets\scripts\organisms\OrganismMono.cs" initialLine="24" containingFunctionPresentation="method 'OnEnable'">
-            <startOffsets>
-              <option value="952" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1000" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
