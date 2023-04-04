@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b439896-6372-4242-af29-8dc7ef37b005" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/UI/HUD.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/HUD.uxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/managers/SimManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/managers/SimManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/managers/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/managers/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/organisms/GeneticOrganism.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/organisms/GeneticOrganism.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/organisms/OrganismMono.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/organisms/OrganismMono.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/organisms/genes/LifecycleGene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/organisms/genes/LifecycleGene.cs" afterDir="false" />
-    </list>
+    <list default="true" id="4b439896-6372-4242-af29-8dc7ef37b005" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Tests/TestBreeding.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/GUI/Views/EditModeTestListGUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.33/UnityEngine.TestRunner/NUnitExtensions/Commands/SetUpTearDownCommand.cs" root0="SKIP_HIGHLIGHTING" />
@@ -86,10 +77,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="25196">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="25196" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
