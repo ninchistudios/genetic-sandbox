@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5683332275441877910}
   - component: {fileID: 3280851150955551710}
+  - component: {fileID: -4450063284868739670}
   m_Layer: 6
   m_Name: CarnivoreAGO
   m_TagString: Untagged
@@ -52,6 +53,26 @@ MonoBehaviour:
   metaMutationWeight: 0.95
   bodySprite: {fileID: 2509773592431103003}
   idealPackSize: 10
+  maxAge: 100
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  birthEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &-4450063284868739670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4168087123377320709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596ac7df0cb744c99fb93cd2dd36b312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  networkShape: 02000000040000000400000002000000
 --- !u!1 &4749129180241529284
 GameObject:
   m_ObjectHideFlags: 0
