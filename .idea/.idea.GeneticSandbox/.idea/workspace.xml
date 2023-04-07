@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b439896-6372-4242-af29-8dc7ef37b005" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GeneticSandbox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GeneticSandbox/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/BENCHNINE-BOLD SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Fonts/BENCHNINE-BOLD SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestEnvironment.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestEnvironment.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/HUD.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/HUD.uxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/managers/SimManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/managers/SimManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/managers/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/managers/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/organisms/GeneticOrganism.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/organisms/GeneticOrganism.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/organisms/OrganismMono.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/organisms/OrganismMono.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/organisms/prefabs/HerbivoreAGO.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/organisms/prefabs/HerbivoreAGO.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/organisms/prefabs/HerbivoreFoodAGO.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/organisms/prefabs/HerbivoreFoodAGO.prefab" afterDir="false" />
-    </list>
+    <list default="true" id="4b439896-6372-4242-af29-8dc7ef37b005" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
