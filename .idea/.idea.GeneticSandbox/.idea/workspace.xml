@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b439896-6372-4242-af29-8dc7ef37b005" name="Changes" comment="" />
+    <list default="true" id="4b439896-6372-4242-af29-8dc7ef37b005" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/UI/HUD.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/HUD.uxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/Genes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/Genes/.idea/.idea.Genes.dir/.idea/projectSettingsUpdater.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/Genes/.idea/.idea.Genes.dir/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/organisms/Gene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/organisms/Gene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

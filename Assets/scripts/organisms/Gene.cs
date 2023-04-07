@@ -9,6 +9,14 @@ namespace ncs {
         // following meta properties never change
         public string Descriptor;
 
+        // the input nodes are collected by the Brain to process through the NN
+        // should be initialised at construction and updated each frame by the Gene 
+        public float[] InputNodes;
+
+        // the input nodes are updated by the Brain to provide input to the Gene
+        // should be initialised at construction and actioned each frame by the Gene
+        public float[] OutputNodes;
+
         // copy constructor, no logic
         // should be called and expanded by subclasses
         public Gene(Gene other) { }
@@ -41,7 +49,8 @@ namespace ncs {
         /// <param name="weight">mutation weight - double in the range 0.0 - 1.0</param>
         public abstract void DoMutation(double weight);
 
-        /// <summary>The implementation of the Gene's behaviour</summary>
+        /// <summary>The implementation of the Gene's behaviour.
+        /// Updates the InputNodes and acts on the values of the OutputNodes.</summary>
         public abstract void Express(OrganismMono go);
 
     }
