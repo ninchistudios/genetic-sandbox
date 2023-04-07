@@ -52,7 +52,7 @@ MonoBehaviour:
   mutationWeight: 0.5
   metaMutationWeight: 0.95
   bodySprite: {fileID: 2509773592431103003}
-  idealPackSize: 20
+  idealPackSize: 30
   maxAge: 50
   deathEvent:
     m_PersistentCalls:

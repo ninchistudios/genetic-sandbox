@@ -16,6 +16,8 @@
                 <ui:Label tabindex="-1" text="0" display-tooltip-when-elided="true" name="CurrentDayData" class="hud-data-label hud-data" style="min-width: 30px;" />
                 <ui:Label tabindex="-1" text="Live Organisms:" display-tooltip-when-elided="true" name="OrganismsLabel" class="hud-data-label" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 2px; padding-right: 2px; padding-top: 2px; padding-bottom: 2px; align-self: stretch; justify-content: space-around; flex-grow: 0; flex-direction: column; width: auto; height: 18px; -unity-text-align: middle-center;" />
                 <ui:Label tabindex="-1" text="0" display-tooltip-when-elided="true" name="OrganismData" class="hud-data-label hud-data" style="min-width: 30px;" />
+                <ui:Label tabindex="-1" text="Environmentals:" display-tooltip-when-elided="true" name="EnvironmentLabel" class="hud-data-label" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 2px; padding-right: 2px; padding-top: 2px; padding-bottom: 2px; align-self: stretch; justify-content: space-around; flex-grow: 0; flex-direction: column; width: auto; height: 18px; -unity-text-align: middle-center;" />
+                <ui:Label tabindex="-1" text="0" display-tooltip-when-elided="true" name="EnvironmentData" class="hud-data-label hud-data" style="min-width: 30px;" />
                 <ui:Label tabindex="-1" text="Frames/Day:" display-tooltip-when-elided="true" name="FRamesPerDayLabel" class="hud-data-label" />
                 <ui:Label tabindex="-1" text="0" display-tooltip-when-elided="true" name="FramesPerDayData" class="hud-data-label hud-data" />
             </ui:VisualElement>

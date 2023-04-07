@@ -36,13 +36,13 @@ namespace ncs {
         void Update() {
             Organism.Live(this);
             if (!reportedDead && !Organism.IsAlive) {
-                deathEvent.Invoke();
                 reportedDead = true;
+                deathEvent.Invoke();
             }
 
             if (!reportedAlive && Organism.IsAlive) {
-                birthEvent.Invoke();
                 reportedAlive = true;
+                birthEvent.Invoke();
             }
         }
         

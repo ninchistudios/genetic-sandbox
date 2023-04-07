@@ -10,6 +10,13 @@ namespace ncs {
         public bool IsFemale { get; private set; }
         public int DaysSinceBirth { get; private set; }
         public bool IsAlive { get; private set; }
+        
+        public enum SpawnType {
+            // TODO this is too specific and needs to be refactored out. The whole herbi/carni/omni taxonomy should be a consequence of metabolism genes, not hardcoded
+            Herbivore,
+            Carnivore,
+            Environment
+        }
 
         public GeneticOrganism(Genome g, string species, bool female, int daysold) {
             Genome = new Genome(g);

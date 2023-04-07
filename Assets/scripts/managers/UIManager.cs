@@ -15,6 +15,7 @@ namespace ncs {
         private Label currentDayData;
         private Label framesPerDayData;
         private Label organismData;
+        private Label environmentData;
         private int liveOrganisms;
 
         private void OnEnable() {
@@ -36,11 +37,13 @@ namespace ncs {
             currentDayData = uiDocument.rootVisualElement.Q<Label>("CurrentDayData");
             framesPerDayData = uiDocument.rootVisualElement.Q<Label>("FramesPerDayData");
             organismData = uiDocument.rootVisualElement.Q<Label>("OrganismData");
+            environmentData = uiDocument.rootVisualElement.Q<Label>("EnvironmentData");
         }
 
         public void Update() {
             currentDayData.text = simManager.SimDay.ToString();
-            organismData.text = simManager.LiveOrganisms.ToString();
+            organismData.text = (simManager.LiveHerbivores + simManager.LiveCarnivores).ToString();
+            environmentData.text = simManager.LiveEnvironment.ToString();
         }
 
         void Start() {
