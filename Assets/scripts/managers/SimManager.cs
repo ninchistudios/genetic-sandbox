@@ -16,6 +16,7 @@ namespace ncs {
         [SerializeField] public GameObject spawnParent;
         [SerializeField] public List<GameObject> herbivorePrefabs;
         [SerializeField] public List<GameObject> carnivorePrefabs;
+        [SerializeField] public List<GameObject> environmentPrefabs;
         public int LiveOrganisms { get; private set; } = 0;
 
         public List<GeneticOrganism> Organisms { get; private set; }
@@ -73,6 +74,10 @@ namespace ncs {
 
         public void SpawnCarnivores() {
             Spawn(carnivorePrefabs[RandomUtils.Next(0, carnivorePrefabs.Count)]);
+        }
+        
+        public void SpawnEnvironment() {
+            Spawn(environmentPrefabs[RandomUtils.Next(0, environmentPrefabs.Count)]);
         }
 
         private void OrganismBorn() {

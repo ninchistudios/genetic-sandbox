@@ -31,6 +31,8 @@ namespace ncs {
             spawnHButton.clicked += SpawnHClicked;
             Button spawnCButton = uiDocument.rootVisualElement.Q<Button>("SpawnCButton");
             spawnCButton.clicked += SpawnCClicked;
+            Button spawnFButton = uiDocument.rootVisualElement.Q<Button>("SpawnFButton");
+            spawnFButton.clicked += SpawnFClicked;
             currentDayData = uiDocument.rootVisualElement.Q<Label>("CurrentDayData");
             framesPerDayData = uiDocument.rootVisualElement.Q<Label>("FramesPerDayData");
             organismData = uiDocument.rootVisualElement.Q<Label>("OrganismData");
@@ -65,6 +67,10 @@ namespace ncs {
         }
         private void SpawnCClicked() {
             simManager.SpawnCarnivores();
+        }
+        
+        private void SpawnFClicked() {
+            simManager.SpawnEnvironment();
         }
 
         private IEnumerator OneSecondUpdate() {
